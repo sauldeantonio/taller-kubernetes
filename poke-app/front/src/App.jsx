@@ -107,11 +107,7 @@ function App() {
   return (
     <main className="app-shell">
       <section className="hero">
-        <p className="eyebrow">Pokédex local</p>
-        <h1>React + .NET + PokeAPI</h1>
-        <p className="hero-copy">
-          Listado paginado de Pokémon consumiendo tu backend .NET, que a su vez llama a la PokeAPI real.
-        </p>
+        <h1 className="eyebrow">Pokédex local</h1>
       </section>
 
       <section className="toolbar">

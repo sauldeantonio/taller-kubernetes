@@ -1,0 +1,22 @@
+services:
+  back:
+    build:
+      context: ./back
+      dockerfile: Dockerfile
+    container_name: poke-back
+    ports:
+      - "5180:8080"
+    restart: unless-stopped
+
+  front:
+    build:
+      context: ./front
+      dockerfile: Dockerfile
+      args:
+        VITE_API_BASE_URL: http://localhost:5180/api/v2
+    container_name: poke-front
+    depends_on:
+      - back
+    ports:
+      - "5173:80"
+    restart: unless-stopped

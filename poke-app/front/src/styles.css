@@ -51,6 +51,7 @@ button {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   opacity: 0.85;
+  text-align: center;
 }
 
 .hero h1 {
